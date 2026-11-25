@@ -1,0 +1,13 @@
+
+services:
+  taskmanager:
+    build: .
+    container_name: devops-task-manager
+    ports:
+      - "5000:5000"
+    volumes:
+      - taskmanager-data:/data
+    restart: unless-stopped
+
+volumes:
+  taskmanager-data:
